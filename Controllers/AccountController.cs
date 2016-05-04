@@ -8,10 +8,10 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using MvcMovie.Filters;
-using MvcMovie.Models;
+using EventMVC.Filters;
+using EventMVC.Models;
 
-namespace MvcMovie.Controllers
+namespace EventMVC.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]

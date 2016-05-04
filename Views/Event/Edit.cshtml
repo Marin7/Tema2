@@ -1,0 +1,70 @@
+﻿@model EventMVC.Models.Event
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Event</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.title)
+            @Html.ValidationMessageFor(model => model.title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.directed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.directed)
+            @Html.ValidationMessageFor(model => model.directed)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.distribution)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.distribution)
+            @Html.ValidationMessageFor(model => model.distribution)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.openingDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.openingDate)
+            @Html.ValidationMessageFor(model => model.openingDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ticketCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ticketCount)
+            @Html.ValidationMessageFor(model => model.ticketCount)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

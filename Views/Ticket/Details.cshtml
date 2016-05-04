@@ -1,0 +1,36 @@
+﻿@model EventMVC.Models.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Ticket</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Event.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Event.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.number)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.row)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.row)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

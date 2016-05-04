@@ -1,0 +1,50 @@
+﻿@model EventMVC.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Event</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.directed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.directed)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.distribution)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.distribution)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.openingDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.openingDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ticketCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ticketCount)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

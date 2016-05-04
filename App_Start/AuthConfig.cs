@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
-using MvcMovie.Models;
+using EventMVC.Models;
 
-namespace MvcMovie
+namespace EventMVC
 {
     public static class AuthConfig
     {
